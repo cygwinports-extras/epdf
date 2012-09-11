@@ -1,0 +1,22 @@
+NAME="epdf"
+VERSION=0.0.1.73173
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="Enlightenment PDF rendering library"
+DESCRIPTION="Renders PDF files to an Evas canvas using Poppler."
+HOMEPAGE="http://www.enlightenment.org/"
+PATCH_URI="01-poppler-libstdc++.patch"
+SVN_URI="http://svn.enlightenment.org/svn/e"
+SVN_BRANCH="trunk/PROTO/epdf"
+SVN_REV=${PV[4]}
+SVN_MODULE=${SVN_BRANCH##*/}
+inherit svn
+
+PKG_NAMES="libepdf0 libepdf-devel"
+libepdf0_CONTENTS="usr/bin/cygepdf-0.dll usr/share/doc/"
+libepdf_devel_CONTENTS="usr/include/ usr/lib/"
+PKG_IGNORE="usr/bin/epdf_evas_test.exe"
+
+CYGCONF_ARGS="--enable-poppler --disable-mupdf"
+
+KEEP_LA_FILES="none"
