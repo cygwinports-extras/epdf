@@ -1,6 +1,6 @@
 NAME="epdf"
 VERSION=0.0.1.73173
-RELEASE=1
+RELEASE=2
 CATEGORY="X11"
 SUMMARY="Enlightenment PDF rendering library"
 DESCRIPTION="Renders PDF files to an Evas canvas using Poppler."
