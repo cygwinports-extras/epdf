@@ -1,0 +1,15 @@
+--- origsrc/epdf/src/lib/Makefile.am	2012-11-06 20:24:29.000000000 -0600
++++ src/epdf/src/lib/Makefile.am	2012-11-06 20:26:46.334725400 -0600
+@@ -42,6 +42,7 @@ libepdf_la_LIBADD = mupdf/libepdf_mupdf.
+ 
+ else
+ 
++libepdf_la_SOURCES += epdf_dummy.cpp
+ libepdf_la_LIBADD = poppler/libepdf_poppler.la
+ 
+ endif
+--- origsrc/epdf/src/lib/epdf_dummy.cpp	1969-12-31 18:00:00.000000000 -0600
++++ src/epdf/src/lib/epdf_dummy.cpp	2012-11-06 20:26:20.744690100 -0600
+@@ -0,0 +1,2 @@
++/* This exists solely to force libtool to link libepdf.la with $CXX
++   when using the poppler backend. */
