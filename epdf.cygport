@@ -1,14 +1,14 @@
 NAME="epdf"
 VERSION=0.0.1.73173
-RELEASE=2
-CATEGORY="X11"
+RELEASE=3
+CATEGORY="Libs"
 SUMMARY="Enlightenment PDF rendering library"
 DESCRIPTION="Renders PDF files to an Evas canvas using Poppler."
 HOMEPAGE="http://www.enlightenment.org/"
 PATCH_URI="01-poppler-cxx-link.patch"
 SVN_URI="http://svn.enlightenment.org/svn/e"
 SVN_BRANCH="trunk/PROTO/epdf"
-SVN_REV=${PV[4]}
+SVN_REV=${VERSION##*.}
 SVN_MODULE=${SVN_BRANCH##*/}
 inherit svn
 
